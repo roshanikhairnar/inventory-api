@@ -8,6 +8,7 @@ golang env
 POSTMAN
 mySQL Workbench
 (You will have to change username and password in main.go file)
+you can use database.sql for basic crud operations.
 
 **How to run?**
 
