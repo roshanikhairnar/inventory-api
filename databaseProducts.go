@@ -39,7 +39,7 @@ func getproductswithvar(db *sql.DB, start, count int) ([]Product, error) {
 func (product *Product) getProduct(db *sql.DB) error {
 	statement := fmt.Sprintf("SELECT * FROM products where productName='%s'", product.ProductName)
 	fmt.Println(statement)
-	return db.QueryRow(statement).Scan(&product.ProductID, &product.ProductName, &product.SubcategoryID)
+	return db.QueryRow(statement).Scan(&product.ProductID, &product.SubcategoryID, &product.ProductName, &product.ProductPrice)
 }
 
 func (product *Product) updateProduct(db *sql.DB) error {
